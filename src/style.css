@@ -1,5 +1,11 @@
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
 #flapy {
-    width: 100px;
+    width: 89px;
 }
 div[flapy-aliner] {
     width: 100%;
@@ -9,4 +15,56 @@ div[flapy-aliner] {
     position: fixed;
     display: flex;
     align-items: center;
+}
+.fp{
+    transition: transform 0.25s ease-out;
+}
+.tuberia{
+    width: 97px;
+    position: absolute;
+}
+.tuberia.ariba{
+    transform: rotate(180deg);
+}
+div[tuberia-container]{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+div[tuberia-aliner]{
+    height: 100vh;
+    min-width: 100%;
+    padding-left: 75vw;
+    display: flex;
+}
+* {
+    outline: 1px solid rgba(0, 208, 255, 0);
+}
+.fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+background-image: url('/fondo.png');
+background-size: cover;
+image-rendering: pixelated;
+animation: scroll 10s linear infinite;
+}
+@keyframes scroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: calc(-1524px) 0;
+  }
+}
+#score{
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    font-size: 24px;
 }
