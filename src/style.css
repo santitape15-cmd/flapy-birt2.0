@@ -22,9 +22,19 @@ div[flapy-aliner] {
 .tuberia{
     width: 97px;
     position: absolute;
+    opacity: 0.6;
 }
 .tuberia.ariba{
     transform: rotate(180deg);
+}
+.plant{
+    width: 78px;
+    position: absolute;
+    /* animation: plant1 2s linear infinite alternate; */
+}
+.plant.ariba{
+    transform: rotate(180deg);
+    /* animation: plant2 2s linear infinite alternate; */
 }
 div[tuberia-container]{
     height: 100%;
@@ -54,12 +64,78 @@ background-size: cover;
 image-rendering: pixelated;
 animation: scroll 10s linear infinite;
 }
+.menu {
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 134px;
+}
+.but {
+  all: unset;
+}
+.but:hover{
+  transform: scale(1.1);
+}
+.but:active{
+  transform: scale(1);
+}
+.logo{
+  width: 200px;
+  
+}
+.start{
+  width: 200px;
+
+}
+.pluma{
+  position:absolute;
+  width: 17px;
+}
 @keyframes scroll {
   0% {
     background-position: 0 0;
   }
   100% {
     background-position: calc(-1524px) 0;
+  }
+}
+@keyframes plant1 {
+  0% {
+   transform: translateY(0%);
+  }
+  100% {
+    transform:  translateY(-100%);
+  }
+}
+@keyframes plant2 {
+  0% {
+   transform: rotate(180deg) translateY(0%);
+  }
+  100% {
+    transform: rotate(180deg) translateY(-100%);
+  }
+}
+@-webkit-keyframes plant1 {
+  0% {
+   transform: translateY(0%);
+  }
+  100% {
+    transform:  translateY(-100%);
+  }
+}
+@-webkit-keyframes plant2 {
+  0% {
+   transform: rotate(180deg) translateY(0%);
+  }
+  100% {
+    transform: rotate(180deg) translateY(-100%);
   }
 }
 #score{
